@@ -1,0 +1,304 @@
+.index_main {
+  position: relative;
+  background: url(../img/981.jpg) no-repeat;
+  background-size: cover;
+  height: 900px;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22vw;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: whitesmoke;
+}
+
+.logo p {
+  position: absolute;
+  font-size: 19px;
+  font-weight: 450;
+  color: black;
+  right: 20px;
+  top: 123px;
+}
+
+.logo_tupian {
+  float: left;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo_tupian img {
+  width: 100%;
+  height: 100%;
+}
+
+.left_items {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  height: 500px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.left_items li {
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: #e1cced;
+  color: black;
+  width: 90%;
+  line-height: 50px;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.data {
+  position: absolute;
+  left: 23vw;
+  top: 0;
+  width: 74vw;
+  height: 800px;
+  border-left: solid 1px #ccc;
+}
+
+.header {
+  border-radius: 8px;
+  height: 50px;
+  background-color: #706b6b;
+  color: white;
+  line-height: 50px;
+  padding-left: 50%;
+  font-size: 17px;
+}
+
+table {
+  width: 98%;
+  margin: 10px auto;
+  margin-left: 10px;
+  border-collapse: collapse;
+  text-align: center;
+  color: black;
+}
+
+td,
+th {
+  border: 1px solid #333;
+}
+
+thead tr {
+  height: 60px;
+  background-color: #ccc;
+  font-size: 18px;
+  color: black;
+}
+
+tbody tr {
+  height: 50px;
+  font-size: 17px;
+}
+
+.add {
+  margin-left: 3%;
+  font-size: 19px;
+}
+
+
+.pages li {
+  display: inline-block;
+}
+
+.changes {
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+.current {
+  margin-left: 10px;
+  font-size: 19px;
+}
+
+.zhezhao {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 900px;
+}
+
+.goole {
+  display: inline-block;
+  width: 100px;
+  height: 33px;
+  background-color: beige;
+  padding-left: 15px;
+  border: 1px solid gray;
+}
+
+.zhezhao_main {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  position: absolute;
+  left: 37%;
+  top: 10%;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.zhezhao_main p {
+  margin-top: 10px;
+}
+
+.zhezhao_main input {
+  background-color: beige;
+}
+
+.zhezhao_main button {
+  margin-top: 60px;
+  margin-left: 52px;
+  height: 39px;
+  width: 94px;
+}
+
+.goole:hover {
+  cursor: pointer;
+}
+
+.goole:hover_id {
+  display: none;
+}
+
+.back {
+  float: right;
+  height: 28px;
+  width: 100px;
+}
+
+.data .add .btnall {
+  width: 100px;
+}
+
+.zhezhao {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 900px;
+}
+
+.goole {
+  text-align: center;
+  line-height: 33px;
+  display: inline-block;
+  width: 100px;
+  height: 33px;
+  background-color: beige;
+  border: 1px solid gray;
+}
+
+.zhezhao_main {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  position: absolute;
+  color: white;
+  left: 37%;
+  top: 10%;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.zhezhao_main_input {
+  padding-left: 20%;
+  margin-top: 20px;
+}
+
+.zhezhao_main p {
+
+  margin-top: 10px;
+}
+
+.zhezhao_main p input {
+  padding-left: 8px;
+}
+
+/* 
+.zhezhao_main p:nth-child(1) {
+  padding-left: 133px;
+}
+
+.zhezhao_main p:nth-child(2) {
+  padding-left: 133px;
+}
+
+.zhezhao_main p:nth-child(3) {
+  padding-left: 133px;
+}
+
+
+
+.zhezhao_main p:nth-child(4) {
+  padding-left: 104px;
+} */
+
+.zhezhao_main input {
+  border: 1px solid gray;
+  height: 24px;
+  border-radius: 3px;
+}
+
+.zhezhao_main_select {
+  margin-left: 16%;
+}
+
+.zhezhao_main button {
+  margin-top: 20px;
+
+
+  height: 31px;
+  width: 85px;
+  margin-left: 15px;
+  height: 26px;
+  width: 69px;
+}
+
+.goole:hover {
+  cursor: pointer;
+}
+
+.zhezhao_main_id {
+  display: none;
+}
+
+.back {
+  float: right;
+  height: 28px;
+  width: 100px;
+}
+
+.data .add .btnall {
+  width: 100px;
+  margin-left: 46%
+}
+
+/*# sourceMappingURL=order.css.map */

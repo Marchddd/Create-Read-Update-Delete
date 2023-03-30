@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/god.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <!-- 仓库分为两个区域，一个是导航模块，一个是仓库内的数据 -->
+    <div class="index_main">
+        <div class="nav">
+            <div class="logo">
+                <div class="logo_tupian">
+                    <img src="img/QQ图片20230311191759.jpg" alt="">
+
+                </div>
+                <p>Marchdd</p>
+            </div>
+            <ul class="left_items">
+                <li>首页</li>
+                <li>博客文章</li>
+                <li>
+                    github地址
+                </li>
+                <li>我的考核</li>
+                <li id="mycompany" class="wuhu">我的饭店</li>
+                <li id="mymoney" class="wuhu">我的订单</li>
+                <li id="mygod" class="wuhu">我的客户</li>
+            </ul>
+        </div>
+
+        <div class="data">
+
+            <div class="add">
+                <p style="color: darkcyan; font-size: 25px;">添加积分</p>
+                积分 <input type="text" name="integral">
+                用户: <input type="text" name="us">
+                性别: <input type="text" name="sex">
+                年龄: <input type="text" name="age"><br>
+
+
+                <!-- <button>添加</button>
+                <button type="reset">重置</button>
+
+                <button class="btnall">查询用户总数:</button><input type="text" class="allTheNumber" onfocus=this.blur()>
+
+                <p class="zhelastxiugaifather">请输入要搜索的用户的名字:<input type="text" class="zhelastxiugai"></p>
+                <div class="goole">查询</div> -->
+                <div class="add_bottom">
+                    <button class="newpart">+ 添加</button>
+                    <button type="reset" class="reset">
+
+                        重置</button>
+                    <button class="import">
+                        <img src="img/导入.png" alt="" width="16px" height="14px">&nbsp;导入
+                    </button>
+                    <button class="export">
+                        <img src="img/导出 (1).png" alt="" width="16px" height="14px">&nbsp;导出
+                    </button>
+                    <button class="btnall">查询订单总量:</button><input type="text" class="allTheNumber"
+                        onfocus=this.blur()><br>
+
+                    <div class="bottom_bottom">
+                        <p class="zhelastxiugaifather">请输入要搜索的菜品的名称:<input type="text" class="zhelastxiugai"></p>
+                        <div class="goole">查询</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>性别</td>
+                        <td>年龄</td>
+                        <td>积分</td>
+                        <td class="none">url</td>
+                        <td>电话号码</td>
+                        <td class="none">id值</td>
+                        <td>用户名</td>
+                        <td>密码</td>
+                        <td class="none">_v值</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+            <!-- 添加一个分页器来实现分页的功能 -->
+
+            <div class="pages">
+                <button id="left">&lt;</button>
+                <span id="nowPage"></span>
+                <button id="right">&gt;</button>
+                总共<span id="allPage"></span>页
+                <button class="back none">返回</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="zhezhao">
+        <div class="zhezhao_main">
+
+            <p class="mashangjieshugepi">年龄 <input type="text" name="age"></p>
+
+            <p class="mashangjieshu"> 性别: <input type="text" name="sex"></p>
+            <p class="kuaiyaojieshu">在原来的基础上添加的积分: <input type="text" name="integral"></p>
+
+
+            <!-- 添加一个点击确认按钮 -->
+            <button>
+                确认
+            </button>
+            <button>
+                取消
+            </button>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="js/god.js"></script>
+</body>
+
+</html>

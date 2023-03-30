@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/load.css">
+    <style>
+        @font-face {
+            font-family: "iconfont logo";
+            src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834');
+            src: url('https://at.alicdn.com/t/font_985780_km7mi63cihi.eot?t=1545807318834#iefix') format('embedded-opentype'),
+                url('https://at.alicdn.com/t/font_985780_km7mi63cihi.woff?t=1545807318834') format('woff'),
+                url('https://at.alicdn.com/t/font_985780_km7mi63cihi.ttf?t=1545807318834') format('truetype'),
+                url('https://at.alicdn.com/t/font_985780_km7mi63cihi.svg?t=1545807318834#iconfont') format('svg');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="load_banner">
+        <div class="load_main">
+
+
+            <h1> Sign in </h1>
+            <div class="input">
+                <div class="input_name">
+                    <input type="text" placeholder="请输入用户名" class="name">
+                    <br>
+                </div>
+
+                <div class="input_password">
+                    <input type="password" placeholder="请输入密码" class="password">
+                    <p class="eyes"> <img src="img/闭眼睛.png" alt="" id="eye"></p>
+                    <br>
+                </div>
+
+                <div class="remembername">
+                    <input type="checkbox" name="" id="remember">记住用户名
+                </div>
+            </div>
+            <button class="regester" name="submit" onclick="">
+                登录
+            </button>
+            <button class="enroll">点我注册一个账号</button>
+        </div>
+    </div>
+
+    <div class="zhuce">
+        <div class="zhuce_main">
+            <h1>Sign up</h1>
+            <input type="text" placeholder="名字" id="zhucename">
+            <br>
+            <input type="text" placeholder="密码" id="ps">
+            <br>
+            <input type="text" placeholder="邮箱" id="mail">
+            <div class="judgeemail">
+                <span class="iconfont">&#xe630;</span>邮箱格式错误
+            </div>
+            <div class="identifyingcode">
+                <input type="text" placeholder="验证码" id="code">
+                <button class="getcode">获取验证码</button>
+            </div>
+            <button class="zhuce_complete">完成注册</button>
+            <button class="zhuce_cancle">返回登录页面</button>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="js/load.js"></script>
+</body>
+
+</html>
