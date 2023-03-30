@@ -35,6 +35,7 @@ var kuaiyaojieshu = document.querySelector('.kuaiyaojieshu');
 
 var mashangjieshugepi = document.querySelector('.mashangjieshugepi');
 var mashangjieshu = document.querySelector('.mashangjieshu');
+var newpart = document.querySelector('.newpart');
 //页面之间的跳转
 mygod.onclick = function () {
     window.location.href = 'god.html'
@@ -168,8 +169,9 @@ function addscore(obj) {
 }
 
 //点击查询用户总数
-btnall.onclick = function () {
-    //当点击查询按钮的时候，发起查询请求，连接接口
+btnallOnclick();
+function btnallOnclick() {
+    //不点击查询按钮，发起查询请求，连接接口，增删改查，用户都能看到
     $.ajax({
         type: "get",
         url: ("http://118.195.129.130:3000/users/allpage_users"),
@@ -197,9 +199,7 @@ oBtnReset.onclick = function () {
         orage.value = null;
     }
 }
-back.onclick = function () {
 
-}
 
 
 //分页器的功能
@@ -256,6 +256,13 @@ function getNowPageData(nowNum, size) {
                         //对于每一行里面的数,有几个内容创建几个单元格
                         var td = document.createElement('td');
                         //将对象里面的内容赋值给td
+                        if (count == 0) {
+                            if (datas[i][k] == 0) {
+                                datas[i][k] = "男";
+                            } else if (datas[i][k] == 1) {
+                                datas[i][k] = "女";
+                            }
+                        }
                         td.innerHTML = datas[i][k];
                         tr.appendChild(td);
                     }
@@ -263,11 +270,19 @@ function getNowPageData(nowNum, size) {
                 }
                 //第三步，创建有删除和修改两项的单元格
                 var td = document.createElement('td');
-                td.innerHTML = ' <button>删除</button>' + "\t"
-                    + ' <button onclick=xiugai(' + JSON.stringify(datas[i]) + ')>修改</button>' + "\t"
+                // ' <button>删除</button>' + "\t"
+                td.innerHTML =
+                    ' <button onclick=xiugai(' + JSON.stringify(datas[i]) + ')>修改</button>' + "\t"
                     + '<button onclick=addscore(' + JSON.stringify(datas[i]) + ')>添加积分</button>'
                     ;
                 tr.appendChild(td);
+
+                // var buttondel = td.querySelectorAll('button')[0];
+                // buttondel.className = "tableDelete";
+                var buttonxiugai = td.querySelectorAll('button')[0];
+                buttonxiugai.className = "tableXiugai";
+                var buttonxiugai2 = td.querySelectorAll('button')[1];
+                buttonxiugai2.className = "tableXiugai";
 
             }
 

@@ -90,7 +90,7 @@ function xiugai(obj) {
             let str1 = "" + fmoamount.value;
             let reg = /^[0-9]*$/;
             if (!reg.test(str1)) {
-                alert("订单金额框中输入纯数字");
+                alert("订单金额框中输入正确的金钱格式");
                 return;
             }
         }
@@ -398,6 +398,16 @@ function getNowPageData(nowNum, size) {
 
                     if (count != 1 && count != 6 && count != 5) {
                         var td = document.createElement('td');
+
+                        if (count == 0) {
+                            if (datas[i][k] == 0) {
+                                datas[i][k] = "未支付";
+                            } else if (datas[i][k] == 1) {
+                                datas[i][k] = "已经支付";
+                            }
+                        }
+
+
                         td.innerHTML = datas[i][k];
                         tr.appendChild(td);
 

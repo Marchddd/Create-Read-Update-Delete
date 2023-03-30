@@ -22,6 +22,7 @@
   height: 200px;
   background-color: whitesmoke;
 }
+
 .logo p {
   position: absolute;
   font-size: 19px;
@@ -30,6 +31,7 @@
   right: 20px;
   top: 123px;
 }
+
 .logo_tupian {
   float: left;
   height: 150px;
@@ -37,6 +39,7 @@
   border-radius: 50%;
   overflow: hidden;
 }
+
 .logo_tupian img {
   width: 100%;
   height: 100%;
@@ -50,6 +53,7 @@
   width: 100%;
   background-color: whitesmoke;
 }
+
 .left_items li {
   height: 50px;
   margin-top: 10px;
@@ -111,14 +115,7 @@ tbody tr {
   margin-left: 3%;
   font-size: 19px;
 }
-.add input {
-  background-color: rgb(235, 212, 235);
-}
-.add button {
-  height: 20px;
-  width: 70px;
-  border: solid black 1px;
-}
+
 
 .pages li {
   display: inline-block;
@@ -134,17 +131,7 @@ tbody tr {
   font-size: 19px;
 }
 
-.zhezhao {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 900px;
-}
-
+/* 
 .goole {
   display: inline-block;
   width: 100px;
@@ -164,12 +151,15 @@ tbody tr {
   font-size: 17px;
   padding-left: 10px;
 }
+
 .zhezhao_main p {
   margin-top: 10px;
 }
+
 .zhezhao_main input {
   background-color: beige;
 }
+
 .zhezhao_main button {
   margin-top: 60px;
   margin-left: 52px;
@@ -180,9 +170,10 @@ tbody tr {
 .goole:hover {
   cursor: pointer;
 }
+
 .goole:hover_id {
   display: none;
-}
+} */
 
 .back {
   float: right;
@@ -192,4 +183,101 @@ tbody tr {
 
 .data .add .btnall {
   width: 100px;
-}/*# sourceMappingURL=god.css.map */
+}
+
+/*# sourceMappingURL=god.css.map */
+
+.zhezhao {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 900px;
+}
+
+.goole {
+  text-align: center;
+  line-height: 33px;
+  display: inline-block;
+  width: 100px;
+  height: 33px;
+  background-color: beige;
+  border: 1px solid gray;
+}
+
+.zhezhao_main {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  position: absolute;
+  color: white;
+  left: 37%;
+  top: 10%;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.zhezhao_main_input {
+  padding-left: 20%;
+  margin-top: 20px;
+}
+
+.zhezhao_main p {
+
+  margin-top: 10px;
+}
+
+.zhezhao_main p input {
+  padding-left: 8px;
+}
+
+/* 
+.zhezhao_main p:nth-child(1) {
+  padding-left: 133px;
+}
+
+.zhezhao_main p:nth-child(2) {
+  padding-left: 133px;
+}
+
+.zhezhao_main p:nth-child(3) {
+  padding-left: 133px;
+}
+
+
+
+.zhezhao_main p:nth-child(4) {
+  padding-left: 104px;
+} */
+
+.zhezhao_main input {
+  border: 1px solid gray;
+  height: 24px;
+  border-radius: 3px;
+}
+
+.zhezhao_main_select {
+  margin-left: 16%;
+}
+
+.zhezhao_main button {
+  margin-top: 20px;
+
+
+  height: 31px;
+  width: 85px;
+  margin-left: 15px;
+  height: 26px;
+  width: 69px;
+}
+
+.goole:hover {
+  cursor: pointer;
+}
+
+.zhezhao_main_id {
+  display: none;
+}
