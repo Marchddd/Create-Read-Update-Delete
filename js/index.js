@@ -68,9 +68,7 @@ function delId(id) {
             error: function (err) {
                 console.log(err);
             }
-
         })
-
     }
 }
 
@@ -143,12 +141,7 @@ function xiugai(obj) {
                 _id: fmoIptid.value,
             },
             success: function (result) {
-                //要修改对应行里面里面的内容，这里打印一下返回回来的数据
-                //这里，只要输入对应行的Id值，就能够修改成功，但是用户一般情况下是不能接触到这个id值的，所以，我们希望
-                //通过获取当前所在的行数来获取这个id值，不对，应该是给每一个数据添加一个特定的属性，但是却不是Id值，可以是
-                //添加所对应的时间，就可以是name
-                // console.log(result);
-                //console.log("修改接口调用成功");            
+
                 alert("修改成功");
                 //之后，关闭页面
                 zhezhao.style.display = "none";
@@ -342,7 +335,6 @@ function AllTheNumber() {
 
         },
         success: function (result) {
-
             //之后，就是将返回的结果给记录下来传递给表单
             allTheNumber.value = result.pages;
 
@@ -386,7 +378,7 @@ function getAllPagesfunction() {
         success: function (data) {
             allNum = data.pages;
             // console.log("下面是你想要的数据");
-            // localStorage.setItem('totalNum', data.pages)
+            localStorage.setItem('totalNum', data.pages)
             var page = Math.ceil(localStorage.getItem('totalNum') / size);
             allPage.innerHTML = page;
             nowPage.innerHTML = nowNum;
