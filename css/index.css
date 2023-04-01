@@ -27,6 +27,10 @@
     background-color: whitesmoke;
 }
 
+.bottom_bottom {
+    display: none;
+}
+
 .logo p {
     position: absolute;
     font-size: 19px;
