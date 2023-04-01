@@ -263,7 +263,7 @@ function getNowPageData(nowNum, size) {
                                 datas[i][k] = "女";
                             }
                         }
-                        td.innerHTML = datas[i][k];
+                        td.innerHTML = judgeStr(datas[i][k]);
                         tr.appendChild(td);
                     }
                     count++;
@@ -293,7 +293,9 @@ function getNowPageData(nowNum, size) {
 //点击左按钮
 left.onclick = function () {
     if (nowNum == 1) {
-        nowNum = Math.ceil(localStorage.getItem('totalNum') / size) + 1;
+        alert("这是第一页");
+
+        return;
     }
     nowNum--;
     // setNowPage();
@@ -304,7 +306,9 @@ left.onclick = function () {
 //点击右按钮
 right.onclick = function () {
     if (nowNum == Math.ceil(localStorage.getItem('totalNum') / size)) {
-        nowNum = 0;
+        alert("这是最后一页");
+
+        return;
     }
     nowNum++;
     // setNowPage();
@@ -312,4 +316,53 @@ right.onclick = function () {
     getNowPageData(nowNum, size)
 }
 
-//设置点击退出登录的时候，进行的操作
+GetUserName();
+function GetUserName() {
+    var logname = document.querySelectorAll('.logname');
+
+    $.ajax({
+        type: "POST",
+
+        url: "http://118.195.129.130:3000/user/inquire",
+        //获取当前的id值
+
+        data: {
+            _id: localStorage.getItem('id')
+        },
+        success: function (result) {
+
+            var datas = result.data;
+
+            for (let i = 0; i < logname.length; i++) {
+                logname[i].innerHTML = datas[0].us;
+
+            }
+
+        }
+    })
+}
+var logout = document.querySelector('.logout');
+logout.onclick = function () {
+    $.ajax({
+        url: "http://118.195.129.130:3000/user/out",
+        type: "post",
+        data: {},
+
+        success: function (result) {
+            console.log("退出登录被点击了");
+            //之后将
+            if (result.err == 0) {
+                //删除本地的id
+
+                //之后，跳转到登录页面
+                if (confirm("你确定要退出登录吗？") == true) {
+                    location.replace('load.html');
+
+                    localStorage.removeItem("id");
+                }
+
+
+            }
+        }
+    })
+}

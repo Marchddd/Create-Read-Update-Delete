@@ -87,6 +87,7 @@
     margin-left: 10px;
 }
 
+
 .bottom_bottom {
     display: none;
 }
@@ -167,4 +168,18 @@ tbody tr td {
 .add_bottom .allTheNumber {
     color: black;
     padding-left: 2px;
+}
+
+.logout {
+    float: right;
+    width: 73px;
+    height: 34px;
+    border: 1px solid blue;
+    border-radius: 9px;
+    transition: all 0.3s;
+}
+
+.logout:hover {
+    background-color: blue;
+    color: white;
 }

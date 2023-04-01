@@ -121,9 +121,16 @@ regester.onclick = function () {
 
             //window.location.href = 'index.html';
             //在这里添加一个判断条件，如果用户输入的用户名和密码是正确的，就可以跳转到另一个页面
+            //跳转到另一个页面的同时，将id存储在LocalStorage当中
             if (result.err == 0) {
                 // window.location.href = 'index.html';
+                var datas = result.data;//没有存进去？
+
+                console.log(datas);
+                console.log(typeof datas);
+                localStorage.setItem('id', datas[0]._id);
                 location.replace('index.html');
+
             } else {
                 alert("账户不存在或者是密码错误,请重新输入");
             }

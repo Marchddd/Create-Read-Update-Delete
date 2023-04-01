@@ -385,9 +385,9 @@ function getAllPagesfunction() {
         type: 'GET',
         success: function (data) {
             allNum = data.pages;
-            console.log("下面是你想要的数据");
-            localStorage.setItem('totalNum', data.pages)
-            var page = Math.ceil(localStorage.getItem('totalNum') / size)
+            // console.log("下面是你想要的数据");
+            // localStorage.setItem('totalNum', data.pages)
+            var page = Math.ceil(localStorage.getItem('totalNum') / size);
             allPage.innerHTML = page;
             nowPage.innerHTML = nowNum;
         }
@@ -410,7 +410,7 @@ function getNowPageData(nowNum, size) {
 
         success: function (result) {//result是一个形参名，代表的是返回的数据
             tbody.innerHTML = null;
-            console.log(result);
+
             var datas = result.data;
             for (var i = 0; i < datas.length; i++) {
                 //创建tr行
@@ -424,7 +424,8 @@ function getNowPageData(nowNum, size) {
                         //对于每一行里面的数,有几个内容创建几个单元格
                         var td = document.createElement('td');
                         //将对象里面的内容赋值给td
-                        td.innerHTML = datas[i][k];
+                        td.innerHTML = judgeStr(datas[i][k]);
+                        //td.innerHTML=datas[i][k].replace(/</g, '&lt;').replace(/>/g, '&gt;')
                         if (count == 5) {
                             if (datas[i][k] == 0) {
                                 td.innerHTML = "面";
@@ -444,7 +445,7 @@ function getNowPageData(nowNum, size) {
                 //第三步，创建有删除和修改两项的单元格
                 var td = document.createElement('td');
                 td.innerHTML = ' <button backgroundColor="#ffeded" color="red"  onclick=delId(' + JSON.stringify(datas[i]._id) + ')>删除</button>' + "\t"
-                    + ' <button onclick=xiugai(' + JSON.stringify(datas[i]) + ')>修改</button>';
+                    + ' <button onclick=xiugai(this)>修改</button><div style="display:none">' + JSON.stringify(datas[i]) + '</div>';
                 tr.appendChild(td);
 
                 var buttondel = td.querySelectorAll('button')[0];
@@ -461,8 +462,10 @@ function getNowPageData(nowNum, size) {
 //点击左按钮
 left.onclick = function () {
     if (nowNum == 1) {
-        nowNum = Math.ceil(localStorage.getItem('totalNum') / size) + 1;
 
+        alert("这是第一页");
+
+        return;
 
     }
     nowNum--;
@@ -474,7 +477,9 @@ left.onclick = function () {
 //点击右按钮
 right.onclick = function () {
     if (nowNum == Math.ceil(localStorage.getItem('totalNum') / size)) {
-        nowNum = 0;
+        alert("这是最后一页");
+
+        return;
 
     }
     nowNum++;
@@ -483,5 +488,57 @@ right.onclick = function () {
     getNowPageData(nowNum, size)
 }
 
+GetUserName();
+function GetUserName() {
+    var logname = document.querySelectorAll('.logname');
+
+    $.ajax({
+        type: "POST",
+
+        url: "http://118.195.129.130:3000/user/inquire",
+        //获取当前的id值
+
+        data: {
+            _id: localStorage.getItem('id')
+        },
+        success: function (result) {
+
+            var datas = result.data;
+
+            for (let i = 0; i < logname.length; i++) {
+                logname[i].innerHTML = datas[0].us;
+
+            }
+
+        }
+    })
+}
+
+//当退出按钮点击的时候，发生的事情
+var logout = document.querySelector('.logout');
+logout.onclick = function () {
+    $.ajax({
+        url: "http://118.195.129.130:3000/user/out",
+        type: "post",
+        data: {},
+
+        success: function (result) {
+            console.log("退出登录被点击了");
+            //之后将
+            if (result.err == 0) {
+                //删除本地的id
+
+                //之后，跳转到登录页面
+                if (confirm("你确定要退出登录吗？") == true) {
+                    location.replace('load.html');
+
+                    localStorage.removeItem("id");
+                }
+
+
+            }
+        }
+    })
+}
 
 
